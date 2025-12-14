@@ -48,6 +48,7 @@ jobs:
       - name: Build for Windows
         run: |
           cargo build --target x86_64-pc-windows-msvc --target-dir build --release
+          move build\x86_64-pc-windows-msvc\release\hachimi_ura_plugin.dll build
       - name: Upload Windows binaries
         uses: actions/upload-artifact@v4
         with:
